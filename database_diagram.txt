@@ -1,0 +1,40 @@
+#QuickDBD
+MatchMapStats
+-
+round_start_time varchar
+round_end_time varchar
+stage varchar
+match_id int
+game_number int
+match_winner varchar
+map_loser varchar
+map_name varchar FK >-< season1stage1.map_name
+map_round int
+winning_team_final_map_score int
+losing_team_final_map_score int
+control_round_name varchar
+attacker varchar
+defender varchar
+team_one_name varchar
+team_two_name varchar
+attacker_payload_distance float
+defender_payload_distance float
+attacker_time_banked float
+defender_time_banked float
+attacker_control_percent float
+defender_control_percent float
+attacker_round_end_score int
+defender_round_end_score int
+
+season1stage1
+-
+start_time varchar
+match_id int FK >-< MatchMapStats.match_id
+stage varchar FK - MatchMapStats.stage
+map_type varchar
+map_name varchar
+player varchar
+team varchar
+stat_name varchar
+hero varchar
+stat_amount float
